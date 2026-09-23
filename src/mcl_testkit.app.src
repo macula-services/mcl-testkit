@@ -1,0 +1,13 @@
+{application, mcl_testkit, [
+    {description, "Test harness for mcl-* services: run a service's real mesh path over an in-memory macula mesh"},
+    {vsn, "0.1.0"},
+    {registered, []},
+    %% A library: nothing to start. meck and macula_testkit are loaded, not
+    %% started, and mcl_om is started by boot_service/1,2 when a test asks.
+    {applications, [kernel, stdlib, meck, macula_testkit, macula, mcl_om]},
+    {modules, []},
+    {licenses, ["Apache-2.0"]},
+    {links, [{"GitHub", "https://github.com/macula-services/mcl-testkit"}]},
+    %% What the hex package carries: rebar3_hex reads this, not rebar.config.
+    {files, ["src", "rebar.config", "README.md", "CHANGELOG.md", "LICENSE"]}
+]}.
