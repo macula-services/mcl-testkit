@@ -26,8 +26,14 @@ echo_round_trip_test() ->
 As a test dependency:
 
 ```erlang
-{profiles, [{test, [{deps, [{mcl_testkit, "~> 0.1"}]}]}]}.
+{profiles, [{test, [{deps, [{mcl_testkit, "~> 1.0"}]}]}]}.
 ```
+
+The 1.0 line is the wire 1.0 line: it builds on the macula-15 `mcl_om` and on
+the `macula_testkit` that answers wire 1.0's pool calls. It is a major and not
+a 0.2 because every service floats `mcl_om` at `~> 0.x` with no lockfile, so no
+`~> 0.x` resolves to it: a service moves onto the new wire when it asks to, by
+name.
 
 ## API
 

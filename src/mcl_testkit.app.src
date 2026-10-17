@@ -1,6 +1,6 @@
 {application, mcl_testkit, [
     {description, "Test harness for mcl-* services: run a service's real mesh path over an in-memory macula mesh"},
-    {vsn, "0.1.0"},
+    {vsn, "1.0.0"},
     {registered, []},
     %% A library: nothing to start. meck and macula_testkit are loaded, not
     %% started, and mcl_om is started by boot_service/1,2 when a test asks.
