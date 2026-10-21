@@ -15,6 +15,10 @@ service floats `mcl_om` at `~> 0.x` with no lockfile, so a 0.x on macula 15
 would reach them on their next build. A 1.0 is one no `~> 0.x` resolves to, so
 nothing moves onto the new wire until it is asked for by name.
 
+### Added
+
+- CI checks every Erlang block in the README and guides (`docs.yml`, macula-codebase-checks#8), on every change including doc-only ones, and `publish-hex.yml` waits on it.
+
 ### Changed
 
 - `mcl_om` floor from `~> 0.27` to `~> 1.0`, the macula-15 line.
