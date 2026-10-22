@@ -7,7 +7,7 @@ this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.htm
 
 ## [1.0.0] - unreleased
 
-Wire 1.0: the harness builds on the macula-15 `mcl_om` and the `macula_testkit`
+Wire 1.0: the harness builds on the macula-16 `mcl_om` and the `macula_testkit`
 release that answers wire 1.0's pool calls.
 
 The major moves to 1.0 with the wire and not to 0.2.0, deliberately: every
