@@ -21,11 +21,19 @@ nothing moves onto the new wire until it is asked for by name.
 
 ### Changed
 
-- `mcl_om` floor from `~> 0.27` to `~> 1.0`, the macula-15 line.
+- `mcl_om` floor from `~> 0.27` to `~> 1.0`, the macula-15 line, and then to
+  `~> 1.4` (macula-codebase-checks#4). 1.4.0 is the `mcl_om` whose base library
+  is macula 16; `~> 1.0` also admits 1.3.0, and rebar3 drops a transitive
+  conflict against a direct constraint without a word
+  (macula-codebase-checks#14), which is how it once resolved 1.3.0 beside
+  macula 16.0.0 and compiled.
 - `macula_testkit` floor from `~> 0.1` to `~> 0.3`: 0.2.0 answers wire 1.0's
   registration wait and group-keyring ask with `{error, unsupported}`, which
   fails every `macula:subscribe` and crashes every publish over its pool.
-- `macula` floor from `~> 12.1` to `~> 15.6`.
+- `macula` floor from `~> 12.1` to `~> 15.6`, and then to `~> 16.0`
+  (macula-codebase-checks#4). Wire 1.0 is unchanged across 16.0, so the harness
+  speaks to the same mesh; what 16.0 changes is the revocation bound
+  (macula#118), which the harness neither issues nor gates.
 
 ## [0.1.0] - unreleased
 
